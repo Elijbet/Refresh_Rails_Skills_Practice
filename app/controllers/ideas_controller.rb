@@ -26,7 +26,9 @@ class IdeasController < ApplicationController
   # POST /ideas
   # POST /ideas.json
   def create
-    @idea = Idea.new(idea_params)
+    # @idea = Idea.new(idea_params)
+    @idea = Idea.create(idea_params.merge(user_id: current_user.id))
+    # @idea = current_user.ideas.build(params[:post])
 
     respond_to do |format|
       if @idea.save
@@ -63,6 +65,18 @@ class IdeasController < ApplicationController
     end
   end
 
+  def upvote 
+    @idea = Idea.find(params[:id])
+    @idea.upvote_by current_user
+    redirect_back(fallback_location: root_path)
+  end  
+
+  def downvote
+    @idea = Idea.find(params[:id])
+    @idea.downvote_by current_user
+    redirect_back(fallback_location: root_path)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_idea
@@ -73,4 +87,5 @@ class IdeasController < ApplicationController
     def idea_params
       params.require(:idea).permit(:name, :description, :picture)
     end
+
 end

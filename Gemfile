@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 gem 'carrierwave'
+gem 'acts_as_votable', '~> 0.10.0'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
