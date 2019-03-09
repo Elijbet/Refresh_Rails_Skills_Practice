@@ -1,5 +1,12 @@
+<div class="container">
+  <div class="quote">
+      "Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen." - 
+      <strong>John Steinbeck</strong> 
+      <%#= Time.now.year %>
+    </div>
+</div>
+<br>
 <h1>Listing ideas</h1>
-
 <% @ideas.in_groups_of(3) do |group| %>
   <div class="row">
     <% group.compact.each do |idea| %>
