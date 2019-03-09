@@ -7,10 +7,11 @@
         <%= image_tag idea.picture_url, width: '100%' if idea.picture.present? %>
         <h4><%= link_to idea.name, idea %></h4>
         <%= idea.description %>
-        <h4>
+        <br>&nbsp;
+        <div class="tiny-letters">
       		Submitted <%= time_ago_in_words(idea.created_at) %> 
 		      by <%= idea.user.email %>
-		    </h4>
+		    <br>
 		    <%= link_to like_idea_path(idea), method: :put do %>
 				  Upvote
 				  <%= idea.get_upvotes.size %>
@@ -20,6 +21,7 @@
 				  Downvote
 					<%= idea.get_downvotes.size %>
 				<% end %>
+			</div>
       </div>
     <% end %>
   </div>

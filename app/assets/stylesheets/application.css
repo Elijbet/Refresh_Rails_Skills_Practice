@@ -27,3 +27,6 @@ th { border-bottom: 1px solid #DDD; }
 .quote {
 	width: 33.33%;
 }
+.tiny-letters{
+	font-size: 10px;
+}
