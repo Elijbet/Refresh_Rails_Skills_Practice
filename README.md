@@ -1,24 +1,20 @@
-# README
+# Idea Shop
+> Users login to post their ideas and images to describe those. The postings display the owner and time posted.  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Project Roadmap
 
-Things you may want to cover:
+- Add design using HTML & CSS
+- Create thumbnails with Carrierwave
+- Add Authentication (user accounts) with Devise
+- acts_as_votable gem
+- create relationship between idea and user
+- log the owner of the idea with the date
+- date in 'time ago' format
 
-* Ruby version
+## Acknowledgments
 
-* System dependencies
+I used [Rails Girls App Tutorial] (https://guides.railsgirls.com/app) to get started on the project and took it further.
 
-* Configuration
+## Authors
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Eliza Khachatryan
