@@ -13,7 +13,12 @@
 
 ## Acknowledgments
 
-I used [Rails Girls App Tutorial] (https://guides.railsgirls.com/app) to get started on the project and took it further.
+I used [Rails Girls App Tutorial](https://guides.railsgirls.com/app) to get started on the project and took it further.
+
+## Installation
+- clone the repo and navigate to the project directory
+- `rails s` to run locally
+- Open http://localhost:3000 to view it in the browser
 
 ## Authors
 
